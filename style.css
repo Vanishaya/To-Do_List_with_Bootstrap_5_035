@@ -1,0 +1,21 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0b0f1a;
+    background-image:
+        radial-gradient(
+            circle at top left,
+            rgba(40, 80, 200, 0.45),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(20, 160, 120, 0.45),
+            transparent 30%
+        );
+    color: #ffffff;
+}
+
+
+
+
