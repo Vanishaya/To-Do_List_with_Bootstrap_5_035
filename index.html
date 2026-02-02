@@ -51,27 +51,56 @@
             </div>
         </div>
 <!-- main -->
-       <div class="add-task d-flex align-items-center gap-3 p-3 rounded shadow-sm bg-dark text-light">
-            <!-- icon add -->
-            <img src="add.png" alt="add task" width="24" height="24">
-            <!-- input -->
-            <input type="text" class="form-control bg-secondary border-0 text-light" placeholder="Add a task... (press Enter)">
-            <!-- priority -->
-            <span class="badge rounded-pill bg-secondary px-3 py-2">
-                Medium priority
-            </span>
-            <button type="submit" class="btn btn-primary rounded-pill px-4 fw-bold">
-             + Add Task
-            </button>
-            
+       <div class="task-panel bg-dark text-light p-4 rounded-4 shadow-lg">
+
+    <!-- ADD TASK (แถวบน) -->
+    <div class="add-task d-flex align-items-center gap-3 mb-3">
+        <img src="add.png" alt="add task" width="24" height="24">
+
+        <input type="text"
+               class="form-control bg-secondary border-0 text-light"
+               placeholder="Add a task... (press Enter)">
+
+        <select class="form-select bg-secondary text-light border-0 rounded-pill"
+                style="width: 180px;">
+            <option selected>Medium priority</option>
+            <option>Low priority</option>
+            <option>High priority</option>
+        </select>
+
+        <button type="submit"
+                class="btn btn-primary rounded-pill px-4 fw-bold"
+                style="width: 180px;">
+            + Add Task
+        </button>
+    </div>
+
+    <!-- SEARCH + FILTER (แถวล่าง) -->
+    <div class="d-flex align-items-center justify-content-between gap-3">
+
+        <!-- search -->
+        <div class="search-task d-flex align-items-center gap-2">
+            <img src="search.png" alt="search" width="20" height="20">
+              <input type="text"
+               class="form-control bg-secondary border-0 text-light"
+                   placeholder="Search tasks...">
         </div>
-        
-        <div class="search-task d-flex align-items-center">
-            <!-- icon search -->
-            <img src="search.png" alt="search" class="search" width="24" height="24">
-            <!-- input -->
-            <input type="text" class="form-control bg-secondary border-0 text-light" placeholder="Search task...">
+
+        <!-- filter -->
+        <div class="btn-group" role="group"> 
+            <input type="radio" class="btn-check" name="filter" id="all" checked> 
+            <label class="btn btn-outline-light" for="all"> All </label>
+
+            <input type="radio" class="btn-check" name="filter" id="active"> 
+            <label class="btn btn-outline-light" for="active"> 
+            <span class="check d-none me-1">✔</span> Active </label>
+
+            <input type="radio" class="btn-check" name="filter" id="completed"> 
+            <label class="btn btn-outline-light" for="completed"> 
+            <span class="check d-none me-1">✔</span> Completed </label>
         </div>
+    </div>
+
     </div>
 
 
